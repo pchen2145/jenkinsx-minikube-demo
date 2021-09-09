@@ -14,18 +14,23 @@ spec:
     gitName: github
     gitServer: https://github.com
     provider: minikube
+    registry: 10.108.75.93
   environments:
   - key: dev
+    owner: pchen2145
+    repository: jenkinsx-minikube-demo
   - key: staging
   - key: production
   ingress:
     domain: ""
-    externalDNS: false
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: mygituser
   repository: bucketrepo
   secretStorage: local
   vault: {}
