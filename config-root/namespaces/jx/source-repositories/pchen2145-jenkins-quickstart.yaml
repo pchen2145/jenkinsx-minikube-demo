@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: pchen2145
+    provider: github
+    repository: jenkins-quickstart
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: pchen2145-jenkins-quickstart
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/pchen2145/jenkins-quickstart.git
+  org: pchen2145
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jenkins-quickstart
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/pchen2145/jenkins-quickstart

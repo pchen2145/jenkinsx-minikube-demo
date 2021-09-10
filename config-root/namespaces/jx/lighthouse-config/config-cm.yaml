@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        pchen2145/jenkins-quickstart: true
         pchen2145/jenkinsx-minikube-demo: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        pchen2145/jenkins-quickstart: merge
         pchen2145/jenkinsx-minikube-demo: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - pchen2145/jenkinsx-minikube-demo
+        - pchen2145/jenkins-quickstart
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - pchen2145/jenkinsx-minikube-demo
+        - pchen2145/jenkins-quickstart
       target_url: http://lighthouse-jx./merge/status
 kind: ConfigMap
 metadata:
